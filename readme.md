@@ -20,3 +20,11 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 In allegato esempi di layout da avere come guida nel caso non abbiate idee sullo stile grafico.
 Buon lavoro, a domani!
+
+SCAFFOLDING
+ 1 - creare in html bottone con id per generare griglia
+ 2 - creare div con id grid dove aggiungere le celle
+ 3 - creare funzione che crea cella
+ 4 - crea ciclo che posiziona le celle 
+ 5 - nel ciclo immettiamo nelle celle i numeri;
+ 
