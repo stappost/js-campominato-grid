@@ -10,3 +10,10 @@ function create_cell(num){
 // RECUPERO BUTTON E DIV #GRID 
 const grid = document.getElementById("grid");
 const button = document.getElementById("play");
+
+button.addEventListener("click", function(){
+    for(i=1; i<=100; i++){
+        let square = create_cell(i);
+        grid.appendChild(square);
+    }
+})
