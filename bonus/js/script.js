@@ -12,8 +12,8 @@ function create_cell(num, cellInRow){
 const grid = document.getElementById("grid");
 const button = document.getElementById("play");
 
-// FUNZIONE GRIGLIA 
-function new_grid(){
+
+
     let level_selector = document.getElementById("difficulty");
     let level = parseInt(level_selector.value);
     let num_cell;
@@ -37,19 +37,19 @@ function new_grid(){
             cellInRow = 10;
             break;
         }
-        button.addEventListener("click", function(){
-            for(i=1; i<=num_cell; i++){
-                let square = create_cell(i);
-                grid.appendChild(square);
-                square.addEventListener("click", function(){
-                    this.classList.toggle("bg_lightblue");
-                    console.log(square.innerText)
-                })
-            }
-        
-        })
-}
+    
+    button.addEventListener("click", function(){
+        grid.innerHTML = " ";
+        for(i=1; i<=num_cell; i++){
+            let square = create_cell(i);
+            grid.appendChild(square);
+            square.addEventListener("click", function(){
+                this.classList.toggle("bg_lightblue");
+                console.log(square.innerText)
+            })
+        }
+    
+    })
 
-new_grid()
 
 
