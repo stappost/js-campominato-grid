@@ -28,3 +28,16 @@ SCAFFOLDING
  4 - crea ciclo che posiziona le celle 
  5 - nel ciclo immettiamo nelle celle i numeri;
  
+
+ SCAFFOLDING FIRST BONUS
+ 1 - dare la possibilità di cliccare le celle;
+ 2 - creare classe con colore di sfondo azzurro;
+ 3 - assegnare la classe alla cella quando viene cliccata;
+ 4 - stampare il numero della cella quando viene cliccata;
+
+ SCAFFOLDING SECOND BONUS
+ 1 - creare selector in html con 3 diversi gradi di difficolta;
+ 2 - recuperare i valori della selector;
+ 3 - determinare le diverse quantità di celle in base alla scelta;
+ 4 - adattare le dimensioni delle celle in base alla scelta;
+ 
