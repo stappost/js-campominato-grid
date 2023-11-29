@@ -3,8 +3,8 @@ function create_cell(num, cellInRow){
     let element = document.createElement("div");
     element.classList.add("square");
     element.innerText = num;
-    element.style.width = `calc(80vh / ${cellInRow})`
-    element.style.height = `calc(80vh / ${cellInRow})`
+    element.style.width = `calc(100vw / ${cellInRow})`
+    element.style.height = `calc(100vw / ${cellInRow})`
     return element;
 }
 
@@ -12,12 +12,14 @@ function create_cell(num, cellInRow){
 const grid = document.getElementById("grid");
 const button = document.getElementById("play");
 
+function newGrid(){
+    grid.innerHTML = " ";
 
-
-    let level_selector = document.getElementById("difficulty");
-    let level = parseInt(level_selector.value);
     let num_cell;
     let cellInRow;
+    
+    let level_selector = document.getElementById("difficulty");
+    let level = parseInt(level_selector.value);
 
     switch(level){
         case 1:
@@ -37,19 +39,28 @@ const button = document.getElementById("play");
             cellInRow = 10;
             break;
         }
+        playGround(num_cell, cellInRow)
+    }
     
-    button.addEventListener("click", function(){
-        grid.innerHTML = " ";
-        for(i=1; i<=num_cell; i++){
-            let square = create_cell(i);
+    function playGround(num_cell, cellInRow){
+        for(let i=1; i<=num_cell; i++){
+            let square = create_cell(i, cellInRow);
             grid.appendChild(square);
             square.addEventListener("click", function(){
                 this.classList.toggle("bg_lightblue");
                 console.log(square.innerText)
             })
         }
-    
+    }
+
+    button.addEventListener("click", function(){
+        newGrid()
     })
+
+
+
+
+
 
 
 
